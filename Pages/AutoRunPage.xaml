@@ -1,0 +1,44 @@
+﻿<Page x:Class="SHRD_Helper.Pages.AutoRun"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SHRD_Helper.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AutoRun">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55px"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Style="{StaticResource Stackpanel}">
+            <Button x:Name="btnMainPage" Content="Вернуться на главную страницу" Click="btnMainPage_Click"
+                    Style="{StaticResource btn}"/>
+            <TextBlock Text="Запуск приложений одной кнопкой" Margin="100,0,0,0" Width="300" VerticalAlignment="Center"
+                       TextAlignment="Center" Style="{StaticResource tblock}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Style="{StaticResource Stackpanel}">
+            <TextBlock Text="Выберите приложения для запуска (для приложений, которые не входят в пакет офиса Microsoft, требуется указать пути)" 
+                       Margin="10" Style="{StaticResource tblock}"/>
+            
+            <StackPanel x:Name="spApps" HorizontalAlignment="Left">
+                <TextBox x:Name="tbox1" Width="500" Margin="5"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10" Style="{StaticResource Stackpanel}">
+                <Button x:Name="btnAdd" Content="+" Click="btnAdd_Click"
+                        Width="20" Height="20" Style="{StaticResource btn+-}"/>
+                <Button x:Name="btnDel" Content="-" Click="btnDel_Click"
+                        Width="20" Height="20" Margin="10,0,0,0" Style="{StaticResource btn+-}"/>
+            </StackPanel>
+
+            <Button x:Name="bntLaunch" Content="Запустить" Click="bntLaunch_Click" 
+                    Style="{StaticResource btn}" Width="Auto" Height="30"/>
+        </StackPanel>
+    </Grid>
+</Page>

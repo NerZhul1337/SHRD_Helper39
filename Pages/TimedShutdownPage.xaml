@@ -1,0 +1,27 @@
+﻿<Page x:Class="SHRD_Helper.Pages.TimedShutdownPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SHRD_Helper.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TimedShutdownPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55px"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Style="{StaticResource Stackpanel}">
+            <Button x:Name="btnMainPage" Content="Главная страница" Click="btnMainPage_Click" Style="{StaticResource btn}"/>
+
+            <TextBlock Text="Выключение ПК ко времени" Margin="100,0,0,0" VerticalAlignment="Center"
+                       TextAlignment="Center" Style="{StaticResource tblock}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Style="{StaticResource Stackpanel}">
+        </StackPanel>
+    </Grid>
+</Page>
